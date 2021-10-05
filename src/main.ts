@@ -1,5 +1,5 @@
 import { argv } from "process";
-import { producer_runner, topics_runner } from "../@lib";
+import { consumer_runner, producer_runner, topics_runner } from "../@lib";
 
 run().then();
 
@@ -25,6 +25,9 @@ async function run() {
         if (!msg) throw new Error("Provide some Message to Produce!!");
         producer_runner(msg);
         break;
+
+        case 'consume':
+          consumer_runner();
 
       default:
         throw new Error("Unmatched Arguments Requested!!");

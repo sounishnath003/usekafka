@@ -3,7 +3,7 @@ import { exit } from "process";
 import { __kafkaConfig } from "./config";
 
 // Responsible for creating `Producers` Kafka
-export async function consumer_runner(message: string) {
+export async function consumer_runner() {
   try {
     // needs admin to create producer
     const consumer: Consumer = __kafkaConfig.consumer({
