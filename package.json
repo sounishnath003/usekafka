@@ -5,7 +5,7 @@
   "scripts": {
     "start": "ts-node src/main.ts",
     "dev": "yarn nodemon --exec ts-node src/main.ts",
-    "build": "yarn tsc"
+    "build": "rm -fr build && yarn tsc"
   },
   "license": "MIT",
   "dependencies": {
